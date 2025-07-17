@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>处方贵重盘点</title>
+<script>
+    const cfid = "1010101010"<!---左边这一串数字就是盘点单id每天跟换就可以了-->>
+</script>
+
+    <style>
+        /* 修正后的固定搜索框样式 */
+        .fixed-search {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+                  
+        }
+         /* 固定结果显示区域样式 */
+        .fixed-results {
+            position: fixed;
+            top: 80px;  /* 在搜索框下方 */
+            left: 0;
+            width: 100%;
+            background: #f8f9fa;
+            padding: 15px;
+            border-top: 1px solid #dee2e6;
+            z-index: 999;
+            max-height: 120px;
+            overflow-y: auto;
+        }
+         /* 结果样式 */
+        .result-item {
+            margin-bottom: 8px;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        #search-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        #search-btn {
+            padding: 8px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* 内容区域间距 */
+        body {
+            padding-top: 60px;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* 处方区标题样式 */
+        .prescription-title {
+            color: brown;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+   <div class="fixed-search">
+        <input type="text" id="indexInput" placeholder="输入药品名称或编号...">
+        <button onclick="showNumber()">搜索</button>
+    </div>
+    <!-- 结果显示区域 -->
+     <!-- 固定结果显示区域 -->
+    <div class="fixed-results" id="result">
+        
+    </div>
+    
+    <!-- 内容区域 -->
+    <div class="content">
+ 
+    <script>
+
+        const ass = [0,2,2,2,2,0,2,0,3,2,2,0,0,2,8,2,0,2,3,0,0,2,2,2,7,1,0,3,2,0,0,3,2,0,0,0,2,5,10,16,0];
+
+        function showNumber() {
+            const index = parseInt(document.getElementById("indexInput").value);
+            if (index >= 0 && index < ass.length) {
+                document.getElementById("result").textContent = 
+                    ` 第${index}个的库存是：${ass[index]}`;
+            } else {
+                document.getElementById("result").textContent = 
+                    "无效位置，请输入0~" + (ass.length - 1) + "之间的数字";
+            }
+        }
+    </script><br><br><br><br>
+<script>
+const cfid1 = "&placepointid=423&zx_hjfq=3&cutid="
+const cfid2 = "&=%25E3%2580%2590B369%25E3%2580%2591%25E9%2587%258D%25E5%25BA%2586%25E9%25BE%2599%25E5%25B1%2595%25E8%25B7%25AF%25E5%25BA%2597&storageid=420&entryid=40&pathtype=4&userid=161011&cuttypeid=null"
+</script>
+<a id='cf1' href=' '>1京都念慈菴蜜炼川贝枇杷膏</a ><br>
+<script>
+const cf1 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=81364361686'
+document.getElementById("cf1").href = cf1+cfid1+cfid+cfid2;
+</script>
+<a id='cf2' href=' '>2京都念慈菴蜜炼川贝枇杷膏</a ><br>
+<script>
+const cf2 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=81364361693'
+document.getElementById("cf2").href = cf2+cfid1+cfid+cfid2;
+</script>
+<a id='cf3' href=' '>3维生素C泡腾片</a ><br>
+<script>
+const cf3 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=21120234'
+document.getElementById("cf3").href = cf3+cfid1+cfid+cfid2;
+</script>
+<a id='cf4' href=' '>4小儿愈美那敏溶液</a ><br>
+<script>
+const cf4 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=4894243100308'
+document.getElementById("cf4").href = cf4+cfid1+cfid+cfid2;
+</script>
+<a id='cf5' href=' '>5复方氨酚溴敏胶囊</a ><br>
+<script>
+const cf5 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=4895013210906'
+document.getElementById("cf5").href = cf5+cfid1+cfid+cfid2;
+</script>
+<a id='cf6' href=' '>6小柴胡颗粒</a ><br>
+<script>
+const cf6 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6900372311510'
+document.getElementById("cf6").href = cf6+cfid1+cfid+cfid2;
+</script>
+<a id='cf7' href=' '>7云南白药气雾剂</a ><br>
+<script>
+const cf7 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6901070243011'
+document.getElementById("cf7").href = cf7+cfid1+cfid+cfid2;
+</script>
+<a id='cf8' href=' '>8伤风停胶囊</a ><br>
+<script>
+const cf8 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6901070384578'
+document.getElementById("cf8").href = cf8+cfid1+cfid+cfid2;
+</script>
+<a id='cf9' href=' '>9感冒止咳颗粒</a ><br>
+<script>
+const cf9 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6901070385100'
+document.getElementById("cf9").href = cf9+cfid1+cfid+cfid2;
+</script>
+<a id='cf10' href=' '>10四季感冒片</a ><br>
+<script>
+const cf10 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6901070385636'
+document.getElementById("cf10").href = cf10+cfid1+cfid+cfid2;
+</script>
+<a id='cf11' href=' '>11妇炎康片</a ><br>
+<script>
+const cf11 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6901070387272'
+document.getElementById("cf11").href = cf11+cfid1+cfid+cfid2;
+</script>
+<a id='cf12' href=' '>12三七参蜂口服液</a ><br>
+<script>
+const cf12 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6901070393600'
+document.getElementById("cf12").href = cf12+cfid1+cfid+cfid2;
+</script>
+<a id='cf13' href=' '>13风寒感冒颗粒</a ><br>
+<script>
+const cf13 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6901070394270'
+document.getElementById("cf13").href = cf13+cfid1+cfid+cfid2;
+</script>
+<a id='cf14' href=' '>14感冒止咳颗粒</a ><br>
+<script>
+const cf14 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6901070394409'
+document.getElementById("cf14").href = cf14+cfid1+cfid+cfid2;
+</script>
+<a id='cf15' href=' '>15感冒灵颗粒</a ><br>
+<script>
+const cf15 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6901339913419'
+document.getElementById("cf15").href = cf15+cfid1+cfid+cfid2;
+</script>
+<a id='cf16' href=' '>16杏苏止咳口服液</a ><br>
+<script>
+const cf16 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6902108000484'
+document.getElementById("cf16").href = cf16+cfid1+cfid+cfid2;
+</script>
+<a id='cf17' href=' '>17蛇胆川贝枇杷膏</a ><br>
+<script>
+const cf17 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6902108001146'
+document.getElementById("cf17").href = cf17+cfid1+cfid+cfid2;
+</script>
+<a id='cf18' href=' '>18知柏地黄丸</a ><br>
+<script>
+const cf18 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6902329305832'
+document.getElementById("cf18").href = cf18+cfid1+cfid+cfid2;
+</script>
+<a id='cf19' href=' '>19抗病毒口服液</a ><br>
+<script>
+const cf19 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6902601629328'
+document.getElementById("cf19").href = cf19+cfid1+cfid+cfid2;
+</script>
+<a id='cf20' href=' '>20阿胶补血口服液</a ><br>
+<script>
+const cf20 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6902870090577'
+document.getElementById("cf20").href = cf20+cfid1+cfid+cfid2;
+</script>
+<a id='cf21' href=' '>21同仁乌鸡白凤丸</a ><br>
+<script>
+const cf21 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6904579110921'
+document.getElementById("cf21").href = cf21+cfid1+cfid+cfid2;
+</script>
+<a id='cf22' href=' '>22复方氨酚烷胺胶囊</a ><br>
+<script>
+const cf22 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6905079100894'
+document.getElementById("cf22").href = cf22+cfid1+cfid+cfid2;
+</script>
+<a id='cf23' href=' '>23感冒疏风片</a ><br>
+<script>
+const cf23 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6907911100628'
+document.getElementById("cf23").href = cf23+cfid1+cfid+cfid2;
+</script>
+<a id='cf24' href=' '>24舒筋健腰丸</a ><br>
+<script>
+const cf24 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6910682004064'
+document.getElementById("cf24").href = cf24+cfid1+cfid+cfid2;
+</script>
+<a id='cf25' href=' '>25龟甲胶</a ><br>
+<script>
+const cf25 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6911782875264'
+document.getElementById("cf25").href = cf25+cfid1+cfid+cfid2;
+</script>
+<a id='cf26' href=' '>26抗病毒颗粒</a ><br>
+<script>
+const cf26 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6914036011180'
+document.getElementById("cf26").href = cf26+cfid1+cfid+cfid2;
+</script>
+<a id='cf27' href=' '>27抗病毒颗粒</a ><br>
+<script>
+const cf27 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6914036011388'
+document.getElementById("cf27").href = cf27+cfid1+cfid+cfid2;
+</script>
+<a id='cf28' href=' '>28抗病毒颗粒</a ><br>
+<script>
+const cf28 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6914036011531'
+document.getElementById("cf28").href = cf28+cfid1+cfid+cfid2;
+</script>
+<a id='cf29' href=' '>29川贝清肺糖浆</a ><br>
+<script>
+const cf29 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6915159000174'
+document.getElementById("cf29").href = cf29+cfid1+cfid+cfid2;
+</script>
+<a id='cf30' href=' '>30清热解毒软胶囊</a ><br>
+<script>
+const cf30 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6916119040278'
+document.getElementById("cf30").href = cf30+cfid1+cfid+cfid2;
+</script>
+<a id='cf31' href=' '>31感冒清热软胶囊</a ><br>
+<script>
+const cf31 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6916119040735'
+document.getElementById("cf31").href = cf31+cfid1+cfid+cfid2;
+</script>
+<a id='cf32' href=' '>32清热解毒软胶囊</a ><br>
+<script>
+const cf32 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6916119041145'
+document.getElementById("cf32").href = cf32+cfid1+cfid+cfid2;
+</script>
+<a id='cf33' href=' '>33银黄软胶囊</a ><br>
+<script>
+const cf33 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6916119042814'
+document.getElementById("cf33").href = cf33+cfid1+cfid+cfid2;
+</script>
+<a id='cf34' href=' '>34急支糖浆</a ><br>
+<script>
+const cf34 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6918163010856'
+document.getElementById("cf34").href = cf34+cfid1+cfid+cfid2;
+</script>
+<a id='cf35' href=' '>35补肾益寿胶囊</a ><br>
+<script>
+const cf35 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6918163051989'
+document.getElementById("cf35").href = cf35+cfid1+cfid+cfid2;
+</script>
+<a id='cf36' href=' '>36清宣止咳颗粒</a ><br>
+<script>
+const cf36 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6919624170614'
+document.getElementById("cf36").href = cf36+cfid1+cfid+cfid2;
+</script>
+<a id='cf37' href=' '>37蚝贝钙片(咀嚼片)</a ><br>
+<script>
+const cf37 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6920050902106'
+document.getElementById("cf37").href = cf37+cfid1+cfid+cfid2;
+</script>
+<a id='cf38' href=' '>38氨酚拉明片</a ><br>
+<script>
+const cf38 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6920312619452'
+document.getElementById("cf38").href = cf38+cfid1+cfid+cfid2;
+</script>
+<a id='cf39' href=' '>39龙牡壮骨颗粒</a ><br>
+<script>
+const cf39 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6920343431948'
+document.getElementById("cf39").href = cf39+cfid1+cfid+cfid2;
+</script>
+<a id='cf40' href=' '>40复方氨酚烷胺胶囊</a ><br>
+<script>
+const cf40 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6920550611010'
+document.getElementById("cf40").href = cf40+cfid1+cfid+cfid2;
+</script>
+<a id='cf41' href=' '>41感冒清热颗粒</a ><br>
+<script>
+const cf41 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6920607130211'
+document.getElementById("cf41").href = cf41+cfid1+cfid+cfid2;
+</script>
+<a id='cf42' href=' '>42感冒清热颗粒</a ><br>
+<script>
+const cf42 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6920607130310'
+document.getElementById("cf42").href = cf42+cfid1+cfid+cfid2;
+</script>
+<a id='cf43' href=' '>43六味地黄丸(浓缩丸)</a ><br>
+<script>
+const cf43 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6920607160706'
+document.getElementById("cf43").href = cf43+cfid1+cfid+cfid2;
+</script>
+<a id='cf44' href=' '>44健肺丸</a ><br>
+<script>
+const cf44 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6920980232663'
+document.getElementById("cf44").href = cf44+cfid1+cfid+cfid2;
+</script>
+<a id='cf45' href=' '>45维生素D滴剂</a ><br>
+<script>
+const cf45 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6920991410708'
+document.getElementById("cf45").href = cf45+cfid1+cfid+cfid2;
+</script>
+<a id='cf46' href=' '>46维生素A软胶囊</a ><br>
+<script>
+const cf46 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6920991420073'
+document.getElementById("cf46").href = cf46+cfid1+cfid+cfid2;
+</script>
+<a id='cf47' href=' '>47阿胶益寿口服液</a ><br>
+<script>
+const cf47 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6921198300113'
+document.getElementById("cf47").href = cf47+cfid1+cfid+cfid2;
+</script>
+<a id='cf48' href=' '>48乌鸡白凤丸</a ><br>
+<script>
+const cf48 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6921198300854'
+document.getElementById("cf48").href = cf48+cfid1+cfid+cfid2;
+</script>
+<a id='cf49' href=' '>49盐酸氨基葡萄糖颗粒</a ><br>
+<script>
+const cf49 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6921543013149'
+document.getElementById("cf49").href = cf49+cfid1+cfid+cfid2;
+</script>
+<a id='cf50' href=' '>50薏芽健脾凝胶</a ><br>
+<script>
+const cf50 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6921805900132'
+document.getElementById("cf50").href = cf50+cfid1+cfid+cfid2;
+</script>
+<a id='cf51' href=' '>51小儿咽扁颗粒</a ><br>
+<script>
+const cf51 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6921874367249'
+document.getElementById("cf51").href = cf51+cfid1+cfid+cfid2;
+</script>
+<a id='cf52' href=' '>52润肺止咳胶囊</a ><br>
+<script>
+const cf52 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6923048100744'
+document.getElementById("cf52").href = cf52+cfid1+cfid+cfid2;
+</script>
+<a id='cf53' href=' '>53芪斛楂颗粒</a ><br>
+<script>
+const cf53 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6923229400106'
+document.getElementById("cf53").href = cf53+cfid1+cfid+cfid2;
+</script>
+<a id='cf54' href=' '>54天麻素片</a ><br>
+<script>
+const cf54 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6923334031189'
+document.getElementById("cf54").href = cf54+cfid1+cfid+cfid2;
+</script>
+<a id='cf55' href=' '>55苄达赖氨酸滴眼液</a ><br>
+<script>
+const cf55 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6923479700209'
+document.getElementById("cf55").href = cf55+cfid1+cfid+cfid2;
+</script>
+<a id='cf56' href=' '>56感冒灵胶囊</a ><br>
+<script>
+const cf56 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6923718120119'
+document.getElementById("cf56").href = cf56+cfid1+cfid+cfid2;
+</script>
+<a id='cf57' href=' '>57抗病毒口服液</a ><br>
+<script>
+const cf57 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6923848600727'
+document.getElementById("cf57").href = cf57+cfid1+cfid+cfid2;
+</script>
+<a id='cf58' href=' '>58复方对乙酰氨基酚片(Ⅱ)</a ><br>
+<script>
+const cf58 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6924147605024'
+document.getElementById("cf58").href = cf58+cfid1+cfid+cfid2;
+</script>
+<a id='cf59' href=' '>59风寒感冒颗粒</a ><br>
+<script>
+const cf59 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6924168202110'
+document.getElementById("cf59").href = cf59+cfid1+cfid+cfid2;
+</script>
+<a id='cf60' href=' '>60风热感冒颗粒</a ><br>
+<script>
+const cf60 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6924168202127'
+document.getElementById("cf60").href = cf60+cfid1+cfid+cfid2;
+</script>
+<a id='cf61' href=' '>61强力枇杷露(炼蜜)</a ><br>
+<script>
+const cf61 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6924935459990'
+document.getElementById("cf61").href = cf61+cfid1+cfid+cfid2;
+</script>
+<a id='cf62' href=' '>62复方金银花颗粒</a ><br>
+<script>
+const cf62 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6924968970929'
+document.getElementById("cf62").href = cf62+cfid1+cfid+cfid2;
+</script>
+<a id='cf63' href=' '>63鼻炎康片</a ><br>
+<script>
+const cf63 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6925462000785'
+document.getElementById("cf63").href = cf63+cfid1+cfid+cfid2;
+</script>
+<a id='cf64' href=' '>64醋酸钙胶囊</a ><br>
+<script>
+const cf64 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6925958520605'
+document.getElementById("cf64").href = cf64+cfid1+cfid+cfid2;
+</script>
+<a id='cf65' href=' '>65健脾八珍糕</a ><br>
+<script>
+const cf65 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6926594500044'
+document.getElementById("cf65").href = cf65+cfid1+cfid+cfid2;
+</script>
+<a id='cf66' href=' '>66复方感冒灵颗粒</a ><br>
+<script>
+const cf66 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6926656501064'
+document.getElementById("cf66").href = cf66+cfid1+cfid+cfid2;
+</script>
+<a id='cf67' href=' '>67强力枇杷露</a ><br>
+<script>
+const cf67 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6926720800826'
+document.getElementById("cf67").href = cf67+cfid1+cfid+cfid2;
+</script>
+<a id='cf68' href=' '>68益母颗粒</a ><br>
+<script>
+const cf68 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6926924500454'
+document.getElementById("cf68").href = cf68+cfid1+cfid+cfid2;
+</script>
+<a id='cf69' href=' '>69妇科千金胶囊</a ><br>
+<script>
+const cf69 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6926924500577'
+document.getElementById("cf69").href = cf69+cfid1+cfid+cfid2;
+</script>
+<a id='cf70' href=' '>70补肺丸</a ><br>
+<script>
+const cf70 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6927306701407'
+document.getElementById("cf70").href = cf70+cfid1+cfid+cfid2;
+</script>
+<a id='cf71' href=' '>71补肺丸</a ><br>
+<script>
+const cf71 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6927306701810'
+document.getElementById("cf71").href = cf71+cfid1+cfid+cfid2;
+</script>
+<a id='cf72' href=' '>72柴石退热颗粒</a ><br>
+<script>
+const cf72 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6927632200902'
+document.getElementById("cf72").href = cf72+cfid1+cfid+cfid2;
+</script>
+<a id='cf73' href=' '>73维生素D滴剂</a ><br>
+<script>
+const cf73 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6927852701166'
+document.getElementById("cf73").href = cf73+cfid1+cfid+cfid2;
+</script>
+<a id='cf74' href=' '>74小儿感冒颗粒</a ><br>
+<script>
+const cf74 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6928476702027'
+document.getElementById("cf74").href = cf74+cfid1+cfid+cfid2;
+</script>
+<a id='cf75' href=' '>75五子衍宗丸</a ><br>
+<script>
+const cf75 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6928880324747'
+document.getElementById("cf75").href = cf75+cfid1+cfid+cfid2;
+</script>
+<a id='cf76' href=' '>76肾脾双补口服液</a ><br>
+<script>
+const cf76 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6930397801604'
+document.getElementById("cf76").href = cf76+cfid1+cfid+cfid2;
+</script>
+<a id='cf77' href=' '>77健脾糕片</a ><br>
+<script>
+const cf77 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6932022401258'
+document.getElementById("cf77").href = cf77+cfid1+cfid+cfid2;
+</script>
+<a id='cf78' href=' '>78洁尔阴洗液</a ><br>
+<script>
+const cf78 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6932556900654'
+document.getElementById("cf78").href = cf78+cfid1+cfid+cfid2;
+</script>
+<a id='cf79' href=' '>79肺宁颗粒</a ><br>
+<script>
+const cf79 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6932650112328'
+document.getElementById("cf79").href = cf79+cfid1+cfid+cfid2;
+</script>
+<a id='cf80' href=' '>80咽炎片</a ><br>
+<script>
+const cf80 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6933555901390'
+document.getElementById("cf80").href = cf80+cfid1+cfid+cfid2;
+</script>
+<a id='cf81' href=' '>81复方氨酚烷胺片</a ><br>
+<script>
+const cf81 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6934247900011'
+document.getElementById("cf81").href = cf81+cfid1+cfid+cfid2;
+</script>
+<a id='cf82' href=' '>82益安宁丸</a ><br>
+<script>
+const cf82 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6934431930091'
+document.getElementById("cf82").href = cf82+cfid1+cfid+cfid2;
+</script>
+<a id='cf83' href=' '>83疏风解毒胶囊</a ><br>
+<script>
+const cf83 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6934927221009'
+document.getElementById("cf83").href = cf83+cfid1+cfid+cfid2;
+</script>
+<a id='cf84' href=' '>84精氨酸布洛芬颗粒</a ><br>
+<script>
+const cf84 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6936399583906'
+document.getElementById("cf84").href = cf84+cfid1+cfid+cfid2;
+</script>
+<a id='cf85' href=' '>85乙酰半胱氨酸颗粒</a ><br>
+<script>
+const cf85 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6936399588635'
+document.getElementById("cf85").href = cf85+cfid1+cfid+cfid2;
+</script>
+<a id='cf86' href=' '>86桂龙咳喘宁胶囊</a ><br>
+<script>
+const cf86 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6937343170487'
+document.getElementById("cf86").href = cf86+cfid1+cfid+cfid2;
+</script>
+<a id='cf87' href=' '>87清喉利咽颗粒</a ><br>
+<script>
+const cf87 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6937343170753'
+document.getElementById("cf87").href = cf87+cfid1+cfid+cfid2;
+</script>
+<a id='cf88' href=' '>88感冒灵颗粒</a ><br>
+<script>
+const cf88 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6938200754932'
+document.getElementById("cf88").href = cf88+cfid1+cfid+cfid2;
+</script>
+<a id='cf89' href=' '>89通窍鼻炎颗粒</a ><br>
+<script>
+const cf89 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6938270471876'
+document.getElementById("cf89").href = cf89+cfid1+cfid+cfid2;
+</script>
+<a id='cf90' href=' '>90六味地黄丸(浓缩丸)</a ><br>
+<script>
+const cf90 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6938706211243'
+document.getElementById("cf90").href = cf90+cfid1+cfid+cfid2;
+</script>
+<a id='cf91' href=' '>91复方葡萄糖酸钙口服溶液</a ><br>
+<script>
+const cf91 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6938780021189'
+document.getElementById("cf91").href = cf91+cfid1+cfid+cfid2;
+</script>
+<a id='cf92' href=' '>92葡萄糖酸锌口服溶液</a ><br>
+<script>
+const cf92 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6938780021196'
+document.getElementById("cf92").href = cf92+cfid1+cfid+cfid2;
+</script>
+<a id='cf93' href=' '>93阿胶</a ><br>
+<script>
+const cf93 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6939116910207'
+document.getElementById("cf93").href = cf93+cfid1+cfid+cfid2;
+</script>
+<a id='cf94' href=' '>94复方阿胶浆</a ><br>
+<script>
+const cf94 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6939527514636'
+document.getElementById("cf94").href = cf94+cfid1+cfid+cfid2;
+</script>
+<a id='cf95' href=' '>95活血止痛软胶囊</a ><br>
+<script>
+const cf95 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6940001100405'
+document.getElementById("cf95").href = cf95+cfid1+cfid+cfid2;
+</script>
+<a id='cf96' href=' '>96咽炎片</a ><br>
+<script>
+const cf96 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6940995800770'
+document.getElementById("cf96").href = cf96+cfid1+cfid+cfid2;
+</script>
+<a id='cf97' href=' '>97复方氨酚烷胺胶囊</a ><br>
+<script>
+const cf97 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6941914218010'
+document.getElementById("cf97").href = cf97+cfid1+cfid+cfid2;
+</script>
+<a id='cf98' href=' '>98氯雷他定胶囊</a ><br>
+<script>
+const cf98 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6941914218584'
+document.getElementById("cf98").href = cf98+cfid1+cfid+cfid2;
+</script>
+<a id='cf99' href=' '>99清血八味片</a ><br>
+<script>
+const cf99 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6943023375011'
+document.getElementById("cf99").href = cf99+cfid1+cfid+cfid2;
+</script>
+<a id='cf100' href=' '>100小儿咳喘灵口服液</a ><br>
+<script>
+const cf100 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6943116400231'
+document.getElementById("cf100").href = cf100+cfid1+cfid+cfid2;
+</script>
+<a id='cf101' href=' '>101神牡安神胶囊</a ><br>
+<script>
+const cf101 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6952365900003'
+document.getElementById("cf101").href = cf101+cfid1+cfid+cfid2;
+</script>
+<a id='cf102' href=' '>102感冒灵颗粒</a ><br>
+<script>
+const cf102 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6958324600175'
+document.getElementById("cf102").href = cf102+cfid1+cfid+cfid2;
+</script>
+<a id='cf103' href=' '>103左炔诺孕酮片</a ><br>
+<script>
+const cf103 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6970282240316'
+document.getElementById("cf103").href = cf103+cfid1+cfid+cfid2;
+</script>
+<a id='cf104' href=' '>104果维康牌维生素C含片(柳橙味)</a ><br>
+<script>
+const cf104 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6970772302432'
+document.getElementById("cf104").href = cf104+cfid1+cfid+cfid2;
+</script>
+<a id='cf105' href=' '>105黄芪精</a ><br>
+<script>
+const cf105 = 'http://pandian.jzj.cn/pandian/MDH00103/OP100015/getGoodsByBarcode?barcode=6971260411100'
+document.getElementById("cf105").href = cf105+cfid1+cfid+cfid2;
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
